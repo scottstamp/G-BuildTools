@@ -92,7 +92,10 @@ public class GBuildTools extends ExtensionForm {
 
     // poster mover
     public ToggleGroup pm_loc_tgl;
+    public Spinner pm_loc_tgl_step;
+
     public ToggleGroup pm_loc_offset;
+    public Spinner pm_loc_offset_step;
     public Label pm_furni_lbl;
 
     public TextField pm_location_txt;
@@ -1371,10 +1374,26 @@ public class GBuildTools extends ExtensionForm {
 
 
     private int locSteps() {
-        return Integer.parseInt(((RadioButton)(pm_loc_tgl.getSelectedToggle())).getText());
+        String value = ((RadioButton)(pm_loc_tgl.getSelectedToggle())).getText();
+        if (value.equals("Other"))
+        {
+            return (int)pm_loc_tgl_step.getValue();
+        }
+        else
+        {
+            return Integer.parseInt(((RadioButton) (pm_loc_tgl.getSelectedToggle())).getText());
+        }
     }
     private int offsetSteps() {
-        return Integer.parseInt(((RadioButton)(pm_loc_offset.getSelectedToggle())).getText());
+        String value = ((RadioButton)(pm_loc_offset.getSelectedToggle())).getText();
+        if (value.equals("Other"))
+        {
+            return (int)pm_loc_offset_step.getValue();
+        }
+        else
+        {
+            return Integer.parseInt(((RadioButton) (pm_loc_offset.getSelectedToggle())).getText());
+        }
     }
 
     public void pm_loc_up_click(ActionEvent actionEvent) {

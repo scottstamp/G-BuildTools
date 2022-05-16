@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="257.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extension.GBuildTools">
+<AnchorPane prefHeight="257.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extension.GBuildTools">
    <children>
       <AnchorPane layoutY="216.0" prefHeight="41.0" prefWidth="543.0" style="-fx-background-radius: 0 0 10 10;" styleClass="themed-background2">
          <children>
@@ -143,37 +143,49 @@
               <content>
                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <AnchorPane layoutX="18.0" layoutY="11.0" prefHeight="158.0" prefWidth="156.0" style="-fx-border-color: #ccc; -fx-background-radius: 5px; -fx-border-radius: 5px;" styleClass="themed-background2">
+                        <AnchorPane layoutX="18.0" layoutY="11.0" prefHeight="170.0" prefWidth="156.0" style="-fx-border-color: #ccc; -fx-background-radius: 5px; -fx-border-radius: 5px;" styleClass="themed-background2">
                            <children>
-                              <Button fx:id="pm_loc_up_btn" disable="true" layoutX="89.0" layoutY="43.0" mnemonicParsing="false" onAction="#pm_loc_up_click" prefHeight="25.0" prefWidth="42.0" rotate="150.0" text="⟵" />
-                              <Button fx:id="pm_loc_right_btn" disable="true" layoutX="89.0" layoutY="87.0" mnemonicParsing="false" onAction="#pm_loc_right_click" prefHeight="25.0" prefWidth="42.0" rotate="-150.0" text="⟵" />
-                              <Button fx:id="pm_loc_down_btn" disable="true" layoutX="18.0" layoutY="87.0" mnemonicParsing="false" onAction="#pm_loc_down_click" prefHeight="25.0" prefWidth="42.0" rotate="-30.0" text="⟵" />
-                              <Button fx:id="pm_loc_left_btn" disable="true" layoutX="18.0" layoutY="43.0" mnemonicParsing="false" onAction="#pm_loc_left_btn_click" prefHeight="25.0" prefWidth="42.0" rotate="30.0" text="⟵" />
-                              <Label layoutX="13.0" layoutY="133.0" text="Step:" />
-                              <RadioButton layoutX="45.0" layoutY="133.0" mnemonicParsing="false" selected="true" text="1">
+                              <Button fx:id="pm_loc_up_btn" disable="true" layoutX="89.0" layoutY="32.0" mnemonicParsing="false" onAction="#pm_loc_up_click" prefHeight="25.0" prefWidth="42.0" rotate="150.0" text="⟵" />
+                              <Button fx:id="pm_loc_right_btn" disable="true" layoutX="89.0" layoutY="76.0" mnemonicParsing="false" onAction="#pm_loc_right_click" prefHeight="25.0" prefWidth="42.0" rotate="-150.0" text="⟵" />
+                              <Button fx:id="pm_loc_down_btn" disable="true" layoutX="18.0" layoutY="76.0" mnemonicParsing="false" onAction="#pm_loc_down_click" prefHeight="25.0" prefWidth="42.0" rotate="-30.0" text="⟵" />
+                              <Button fx:id="pm_loc_left_btn" disable="true" layoutX="18.0" layoutY="32.0" mnemonicParsing="false" onAction="#pm_loc_left_btn_click" prefHeight="25.0" prefWidth="42.0" rotate="30.0" text="⟵" />
+                              <Label layoutX="13.0" layoutY="113.0" text="Step:" />
+                              <RadioButton layoutX="45.0" layoutY="113.0" mnemonicParsing="false" selected="true" text="1">
                                  <toggleGroup>
                                     <ToggleGroup fx:id="pm_loc_tgl" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton layoutX="81.0" layoutY="133.0" mnemonicParsing="false" text="3" toggleGroup="$pm_loc_tgl" />
-                              <RadioButton layoutX="115.0" layoutY="133.0" mnemonicParsing="false" text="9" toggleGroup="$pm_loc_tgl" />
+                              <RadioButton layoutX="81.0" layoutY="113.0" mnemonicParsing="false" text="3" toggleGroup="$pm_loc_tgl" />
+                              <RadioButton layoutX="115.0" layoutY="113.0" mnemonicParsing="false" text="9" toggleGroup="$pm_loc_tgl" />
+                              <RadioButton layoutX="13.0" layoutY="141.0" mnemonicParsing="false" text="Other" toggleGroup="$pm_loc_tgl" />
+                              <Spinner fx:id="pm_loc_tgl_step" editable="true" layoutX="80.0" layoutY="139.0" prefHeight="25.0" prefWidth="64.0">
+                                 <valueFactory>
+                                    <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="1" max="1000" min="1" />
+                                 </valueFactory>
+                              </Spinner>
                               <Label layoutX="11.0" layoutY="9.0" prefHeight="17.0" prefWidth="65.0" text="Location:" textFill="#000000db" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="197.0" layoutY="11.0" prefHeight="158.0" prefWidth="156.0" style="-fx-border-color: #ccc; -fx-background-radius: 5px; -fx-border-radius: 5px;" styleClass="themed-background2">
+                        <AnchorPane layoutX="197.0" layoutY="11.0" prefHeight="170.0" prefWidth="156.0" style="-fx-border-color: #ccc; -fx-background-radius: 5px; -fx-border-radius: 5px;" styleClass="themed-background2">
                            <children>
-                              <Button fx:id="pm_offset_up_btn" disable="true" layoutX="59.0" layoutY="36.0" mnemonicParsing="false" onAction="#pm_offset_up_click" prefHeight="25.0" prefWidth="32.0" rotate="135.0" text="∟" />
-                              <Button fx:id="pm_offset_right_btn" disable="true" layoutX="86.0" layoutY="63.0" mnemonicParsing="false" onAction="#pm_offset_right_click" prefHeight="25.0" prefWidth="32.0" rotate="225.0" text="∟" />
-                              <Button fx:id="pm_offset_down_btn" disable="true" layoutX="59.0" layoutY="90.0" mnemonicParsing="false" onAction="#pm_offset_down_click" prefHeight="25.0" prefWidth="32.0" rotate="315.0" text="∟" />
-                              <Button fx:id="pm_offset_left_btn" disable="true" layoutX="32.0" layoutY="63.0" mnemonicParsing="false" onAction="#pm_offset_left_click" prefHeight="25.0" prefWidth="32.0" rotate="45.0" text="∟" />
-                              <Label layoutX="13.0" layoutY="133.0" text="Step:" />
-                              <RadioButton layoutX="45.0" layoutY="133.0" mnemonicParsing="false" selected="true" text="1">
+                              <Button fx:id="pm_offset_up_btn" disable="true" layoutX="59.0" layoutY="23.0" mnemonicParsing="false" onAction="#pm_offset_up_click" prefHeight="25.0" prefWidth="32.0" rotate="135.0" text="∟" />
+                              <Button fx:id="pm_offset_right_btn" disable="true" layoutX="86.0" layoutY="50.0" mnemonicParsing="false" onAction="#pm_offset_right_click" prefHeight="25.0" prefWidth="32.0" rotate="225.0" text="∟" />
+                              <Button fx:id="pm_offset_down_btn" disable="true" layoutX="59.0" layoutY="77.0" mnemonicParsing="false" onAction="#pm_offset_down_click" prefHeight="25.0" prefWidth="32.0" rotate="315.0" text="∟" />
+                              <Button fx:id="pm_offset_left_btn" disable="true" layoutX="32.0" layoutY="50.0" mnemonicParsing="false" onAction="#pm_offset_left_click" prefHeight="25.0" prefWidth="32.0" rotate="45.0" text="∟" />
+                              <Label layoutX="13.0" layoutY="113.0" text="Step:" />
+                              <RadioButton layoutX="45.0" layoutY="113.0" mnemonicParsing="false" selected="true" text="1">
                                  <toggleGroup>
                                     <ToggleGroup fx:id="pm_loc_offset" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton layoutX="81.0" layoutY="133.0" mnemonicParsing="false" text="3" toggleGroup="$pm_loc_offset" />
-                              <RadioButton layoutX="115.0" layoutY="133.0" mnemonicParsing="false" text="9" toggleGroup="$pm_loc_offset" />
+                              <RadioButton layoutX="81.0" layoutY="113.0" mnemonicParsing="false" text="3" toggleGroup="$pm_loc_offset" />
+                              <RadioButton layoutX="115.0" layoutY="113.0" mnemonicParsing="false" text="9" toggleGroup="$pm_loc_offset" />
+                              <RadioButton layoutX="13.0" layoutY="141.0" mnemonicParsing="false" text="Other" toggleGroup="$pm_loc_offset" />
+                              <Spinner fx:id="pm_loc_offset_step" editable="true" layoutX="78.0" layoutY="137.0" prefHeight="25.0" prefWidth="64.0">
+                                 <valueFactory>
+                                    <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="1" max="1000" min="1" />
+                                 </valueFactory>
+                              </Spinner>
                               <Label layoutX="11.0" layoutY="9.0" prefHeight="17.0" prefWidth="65.0" text="Offset:" textFill="#000000db" />
                            </children>
                         </AnchorPane>
